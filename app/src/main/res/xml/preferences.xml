@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Treba nastavit:
+		Zvonit ked nie je duty
+	    Quiet hours
+		Duty
+			quiet hours
+			
+		Vseobecne:
+			zvuk backup
+			zvuk alarm
+			automaticke mazanie
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:key="quiet_hours_enabled"
+        android:title="@string/quiet_hours_enabled"
+        android:summaryOn="@string/quiet_hours_enabled_on"
+        android:summaryOff="@string/quiet_hours_enabled_off"
+        android:defaultValue="false" />
+   <com.symtoo.duty.preference.TimeRangePreference
+        android:key="quiet_hours_timerange"
+        android:dependency="quiet_hours_enabled"
+	/>
+
+   <com.symtoo.duty.preference.NumberPickerPreference
+	    android:dialogLayout="@layout/preference_number"
+	    android:key="max_age"
+	    android:title="@string/max_notification_age"
+	    android:defaultValue="7"
+	    />
+    
+   <PreferenceCategory
+        android:key="preferences_sounds"
+        android:title="@string/preferences_category_sounds" >
+        <RingtonePreference
+            android:key="alarm_sound"
+            android:ringtoneType="notification"
+            android:showDefault="true"
+            android:showSilent="true"
+            android:title="@string/alarm_sound" />
+        <RingtonePreference
+            android:key="backup_sound"
+            android:ringtoneType="notification"
+            android:showDefault="true"
+            android:showSilent="true"
+            android:title="@string/backup_sound" />
+    </PreferenceCategory>
+    
+</PreferenceScreen>

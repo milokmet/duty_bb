@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item 
+        android:id="@+id/menu_multiitems"
+        android:icon="@android:drawable/ic_menu_more"
+        android:title="@string/preferences"
+        android:showAsAction="ifRoom"
+        >
+    <menu>
+    	<item
+        	android:id="@+id/menu_duty_profile"
+        	android:icon="@android:drawable/ic_menu_agenda"
+        	android:title="@string/menu_duty_profile"
+        	android:checkable="true"
+        />
+        <item android:id="@+id/menu_duty_calls"
+            android:icon="@drawable/ic_menu_call_receive"
+    		android:title="@string/receive_duty_calls"
+        />
+        <item android:id="@+id/menu_settings"
+	        android:title="@string/menu_settings"
+        	android:icon="@android:drawable/ic_menu_preferences"
+         />
+        <item android:id="@+id/menu_purge_alarms"
+            android:title="@string/menu_purge_alarms"
+            android:icon="@android:drawable/ic_menu_delete"
+            />
+    </menu>
+    </item>
+    
+</menu>
