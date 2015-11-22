@@ -1,3 +1,3 @@
-My first android applications project.
+# This is useless for you :-) #
 
-It helps to sort out my SMS
+My first android applications project, to sort out my SMS.
